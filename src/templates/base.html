@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Encontre Vagas!</title>
+    {% include 'sessions/_head.html' %}
+</head>
+<body>
+    <header>
+        {% include 'sessions/_nav.html' %}
+    </header>
+    
+    <!-- banner -->
+    {%block banner%}{%endblock%}
+
+    <main>
+        {%block conteudo%}{%endblock%}
+    </main>
+    <script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+</body>
+</html>

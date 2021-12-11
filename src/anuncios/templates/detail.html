@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{%block conteudo%}
+    <div id="add-form-container" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">{{vaga.titulo}}</h1>
+            </div>
+            <div id="form-box" class="col-md-12">
+                <div class="form-group">
+                    <label for="description">Descrição da vaga:</label>
+                    <textarea type="text" class="form-control" id="description" name="description" placeholder="Descreva as atividades do desenvolvedor..." readonly>{{vaga.descricao}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="company">Empresa contratante:</label>
+                    <input type="text" value="{{vaga.empresa}}" class="form-control" id="company" name="company" placeholder="Digite a empresa que vai contratar" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail para contato:</label>
+                    <input type="email" value="{{vaga.email}}" class="form-control" id="email" name="email" placeholder="Digite o email para contato" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salário oferecido:</label>
+                    <input type="text" value="{{vaga.salario}}" class="form-control" id="salary" name="salary" placeholder="Digite o salário da vaga" readonly>
+                </div>        
+                <a href="{% url 'home' %}" class="btn btn-primary">Voltar</a>
+            </div>
+        </div>
+    </div>
+{%endblock%}
